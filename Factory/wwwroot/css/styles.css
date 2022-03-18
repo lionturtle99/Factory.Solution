@@ -6,11 +6,11 @@ body {
 }
 .header {
   margin: 10em 0 5em 0;
-  background-image: url('../img/water_color.jpeg');
+  background-image: url('../img/nuclear.jpeg');
   background-repeat: no-repeat;
   text-align: center;
   padding: 3em;
-  min-height: 20em;
+  max-height: 10em;
   color: white;
 }
 .navbar {
@@ -20,7 +20,7 @@ body {
   top:0;
   left:0;
 	z-index: 1;
-  padding:20px 40px;
+  /* padding:10px 40px; */
 }
 .navbar ul {
 	height: 50px;
@@ -34,28 +34,28 @@ body {
 }
 nav ul li a{
   text-decoration:none;
-  color:rgb(192, 0, 160);
+  color:rgb(255, 0, 0);
   font-weight:bold;
 }
 nav ul li a:hover{
   text-decoration:none;
-  color:rgb(255, 0, 0);
+  color:rgb(195, 0, 255);
 }
 .logo{
   width:auto;
   max-height:100px;
 }
-h3, h4, h5, h6{
+h2, h3, h4, h5, h6{
   text-align: center;
   margin: 2em;
 }
 a {
-  color:rgb(192, 0, 160);
+  color:rgb(255, 0, 0);
   font-weight: bold;
 }
 a:hover{
   text-decoration:none;
-  color:rgb(255, 0, 0);
+  color:rgb(195, 0, 255);
 }
 .margin {
   margin: 3em;
