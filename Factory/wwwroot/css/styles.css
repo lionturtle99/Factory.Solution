@@ -1,17 +1,16 @@
 body {
-  background: linear-gradient(whitesmoke, pink, orange, red);
-  height: 100vh;
+  background-color: rgb(34, 29, 29);
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: rgb(0, 0, 0);
+  color: white;
 }
 .header {
-  margin: 10em 0 5em 0;
-  background-image: url('../img/nuclear.jpeg');
+  background-image: url("../img/pumps.jpeg");
+  background-size: cover;
   background-repeat: no-repeat;
+  margin: 10em 0 5em 0;
   text-align: center;
   padding: 3em;
   max-height: 10em;
-  color: white;
 }
 .navbar {
   background-color:aliceblue;
@@ -20,7 +19,6 @@ body {
   top:0;
   left:0;
 	z-index: 1;
-  /* padding:10px 40px; */
 }
 .navbar ul {
 	height: 50px;
@@ -31,6 +29,7 @@ body {
 	padding-top: 40px;
   padding-right:5em;
 	font-size: 20px;
+  color: black;
 }
 nav ul li a{
   text-decoration:none;
@@ -63,5 +62,10 @@ a:hover{
 }
 .center {
   text-align: center;
+}
+.machine {
+  border: dotted rgb(131, 119, 119) 1px;
+  width: fit-content;
+  margin: auto;
 }
 

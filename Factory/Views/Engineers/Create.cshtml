@@ -9,12 +9,16 @@
 <div class="margin">
   @using (Html.BeginForm())
   {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
-
-    @Html.LabelFor(model => model.DateEmployed)
-    @Html.TextBoxFor(model => model.DateEmployed, new { type="date" })
-
-    <input type="submit" value="Add new engineer"/>
+    <div class="form-group">
+      <div class="form-control">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+      </div>
+      <div class="form-control">
+        @Html.LabelFor(model => model.DateEmployed)
+        @Html.TextBoxFor(model => model.DateEmployed, new { type="date" })
+      </div>
+      <input class="btn btn-info" type="submit" value="Add new engineer"/>
+    </div>
   }
 </div>
