@@ -1,0 +1,29 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Edit engineer: @Model.Name</h2>
+
+<div class="margin">
+  @using (Html.BeginForm())
+  {
+    <div class="form=group">
+      <div class="form-control">
+        @Html.Hidden("EngineerId", Model.EngineerId)
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { placeholder="${Model.Name}" })
+      </div>
+      <div class="form-control">
+        @Html.LabelFor(model => model.DateEmployed)
+        @Html.TextBoxFor(model => model.DateEmployed, new { type="date", placeholder="${Model.DateEmployed}" })
+      </div>
+      <div class="form-control">
+        @Html.Label("Select Machines")
+        @Html.DropDownList("MachineId")
+      </div>
+    </div>
+    <input type="submit" value="Update engineer details"/>
+  }
+</div>
