@@ -49,7 +49,7 @@ a {
 }
 a:hover{
   text-decoration:none;
-  color:rgb(255, 208, 0);
+  color:rgb(9, 255, 0)
 }
 .margin {
   margin: 2em;
@@ -59,10 +59,10 @@ a:hover{
   text-align: center;
 }
 .row p a {
-  color: rgb(94, 255, 0);
+  color:rgb(255, 187, 0);
 }
 .row p a:hover {
-  color:rgb(255, 208, 0);
+  color:rgb(251, 255, 0);
 }
 .col-6 .row{
   width: fit-content;
@@ -81,4 +81,7 @@ a:hover{
 }
 .center p a {
   color: white;
+}
+.center p:hover {
+  background-color:rgb(9, 255, 0)
 }

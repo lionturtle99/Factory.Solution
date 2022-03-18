@@ -7,18 +7,20 @@
 
 <h2>Machine registry</h2>
 
-<div class="margin center">
+<div class="margin center row">
   @if (@Model.Count == 0)
   {
     <h3>No machines have been added to the registry</h3>
   }
-  <ul>
-    @foreach (Machine machine in Model)
-    {
-      <li>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</li>
-    }
-  </ul>
+  @foreach (Machine machine in Model)
+  {
+    <div class="col">
+      <h4>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</h4>
+      <h6>Description: @machine.Description</h6>
+    </div>
+  }
 </div>
+
 <div class="center">
   <p>@Html.ActionLink("Add new machine", "Create")</p>
 </div>
