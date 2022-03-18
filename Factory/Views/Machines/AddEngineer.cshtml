@@ -6,16 +6,19 @@
 
 <h2>Add a coures</h2>
 
-<h4>Add a engineer to this machine: @Html.DisplayFor(model => model.Name)</h4>
+<div class="margin center">
+  <h4>Add a engineer to this machine: @Html.DisplayFor(model => model.Name)</h4>
+  @using (Html.BeginForm())
+  {
+      @Html.HiddenFor(model => model.MachineId)
 
-@using (Html.BeginForm())
-{
-    @Html.HiddenFor(model => model.MachineId)
+      @Html.Label("Select engineer")
+      @Html.DropDownList("EngineerId")
 
-    @Html.Label("Select engineer")
-    @Html.DropDownList("EngineerId")
+      <input type="submit" value="Save" />
+  }
+</div>
 
-    <input type="submit" value="Save" />
-}
-
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="center">
+  <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>

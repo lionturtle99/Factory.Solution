@@ -2,8 +2,29 @@
   Layout = "_Layout";
 }
 
-<h3>Click on the menu items below to manage your machine load.</h3>
-<div class="center">
+<h3>Click on the menu options below to manage your factory.</h3>
+
+<div class="row">
+  <div class="col-6">
+    <h4>Engineers</h4>
+    @foreach(var engineer in ViewBag.Engineers)
+    {
+      <div class="row">
+        <p>@Html.ActionLink($"{engineer.Name}", "Details", "Engineers", new { id = engineer.EngineerId })</p>
+      </div>
+    }
+  </div>
+  <div class="col-6">
+    <h4>Machines</h4>
+    @foreach(var machine in ViewBag.Machines)
+    {
+      <div class="row">
+        <p>@Html.ActionLink($"{machine.Name}", "Details", "Machines", new { id = machine.MachineId })</p>
+      </div>
+    }
+  </div>
+</div>
+<div class="margin center">
   <p>@Html.ActionLink("View Machines", "Index", "Machines")</p>
   <p>@Html.ActionLink("View Engineers", "Index", "Engineers")</p>
 </div>
