@@ -20,8 +20,21 @@ namespace Factory.Controllers
 
     public ActionResult Index()
     {
-      List<Engineer> queryModel = _db.Engineers.OrderBy(engineer => engineer.Name).ToList();
-      return View(queryModel);
+      return View();
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Engineer engineer)
+    {
+      _db.Engineers.Add(engineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
   }
 }
