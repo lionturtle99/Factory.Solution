@@ -1,0 +1,23 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+
+<h2>Edit Machine: @Model.Name</h2>
+
+<div class="margin">
+  @using (Html.BeginForm())
+  {
+    @Html.Hidden("MachineId", Model.MachineId)
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { placeholder="${Model.Name}" })
+
+    @Html.LabelFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description, new { placeholder="${Model.Description}" })
+
+    @Html.Label("Select Engineers")
+    @Html.DropDownList("EngineerId")
+    <input type="submit" value="Update Machine"/>
+  }
+</div>
