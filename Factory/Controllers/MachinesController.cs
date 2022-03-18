@@ -23,5 +23,18 @@ namespace Factory.Controllers
       List<Machine> queryModel = _db.Machines.OrderBy(machine => machine.Name).ToList();
       return View(queryModel);
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Machine machine)
+    {
+      _db.Machines.Add(machine);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   }
 }
