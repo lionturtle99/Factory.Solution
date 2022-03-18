@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(whitesmoke, pink, orange, red);
+  height: 100vh;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: rgb(0, 0, 0);
 }
@@ -59,5 +60,8 @@ a:hover{
 .margin {
   margin: 3em;
   padding: 2em;
+}
+.center {
+  text-align: center;
 }
 
