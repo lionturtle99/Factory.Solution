@@ -20,7 +20,8 @@ namespace Factory.Controllers
 
     public ActionResult Index()
     {
-      return View();
+      List<Engineer> query = _db.Engineers.OrderBy(engineer => engineer.Name).ToList();
+      return View(query);
     }
 
     public ActionResult Create()
@@ -33,6 +34,24 @@ namespace Factory.Controllers
     {
       _db.Engineers.Add(engineer);
       _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+    public ActionResult AddMachine(int id)
+    {
+      Engineer thisEngineer = _db.Engineers.FirstOrDefault(engineer => engineer.EngineerId == id);
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View(thisEngineer);
+    }
+
+    [HttpPost]
+    public ActionResult AddMachine(Engineer engineer, int MachineId)
+    {
+      if (MachineId != 0)
+      {
+        _db.EngineerMachine.Add(new EngineerMachine() { MachineId = MachineId, EngineerId = engineer.EngineerId });
+        _db.SaveChanges();
+      }
       return RedirectToAction("Index");
     }
 
